@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/index.css">
+<% layout("/layouts/boilerplate") %>
+    
+        <section class="shop">
+            <h1>ALL Listing</h1>
+            <div class="box">
+                <% for(let list of ALLList) { %>
+                    <a href="/listing/<%= list._id %>">
+                    <div class="item">
+                        <img src="<%= list.image %>" alt="">
+                        <p><b><%= list.title %></b></p>
+                       
+                        <p>&#x20B9; <b> <%= list.price.toLocaleString("en-IN") %>/Night </b></p>
+                    </div> 
+                </a>
+                    <% } %>
+            </div>
+        </section>

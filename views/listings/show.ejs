@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/show.css">
+<% layout("/layouts/boilerplate") %>
+
+    <div class="showpage">
+        <h1>
+            <%= ShowData.title %>
+        </h1>
+        <ul class="show-item">
+            <div class="card">
+                <img src="<%= ShowData.image %>" alt="Sorry">
+                <div class="bottum">
+                    <div class="details">
+                       
+                        <li>
+                            <%= ShowData.description %>
+                        </li>
+                        <li> &#x20B9; <b>
+                                <%= ShowData.price %> /Night
+                            </b> </li>
+                        <li>
+                            <%= ShowData.location %>
+                        </li>
+                        <li>
+                            <%= ShowData.country %>
+                        </li>
+                    </div>
+                    <div class="btn">
+                        <form action="/listing/<%= ShowData._id %>/edit"><button class="btn">Edit</button></form><br>
+                        <form method="post" action="/listing/<%= ShowData._id %>/delete?_method=DELETE">
+                            <button class="btn delete" onclick="Ask()">Delete Listing</button>
+                    </div>
+                </div>
+            </div>
+        </ul>
+
+        </form>
+    </div>
+    <script src="Ask.js"></script>

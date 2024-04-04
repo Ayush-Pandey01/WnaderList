@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/newForm.css">
+<% layout("/layouts/boilerplate") %>
+    <div class="mid-container">
+        <form method="POST" action="/listing" id="form">
+            <h1> ADD NEW LIST</h1><br>
+            <div class="input-control">
+                <label for="title">Enter title</label>
+                <input type="text" id="title" name="listing[title]">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="description">description</label>
+                <textarea type="text" rows="4" id="description" name="listing[description]"></textarea>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="image"> Image URL </label>
+                <input type="text" id="image" name="listing[image]">
+                <div class="error"></div>
+            </div>
+            <div class="input-control oneLine">
+                <label for="price">Price </label>
+                <input type="number" id="price" name="listing[price]">
+                <div class="error"></div>
+            </div>
+            <div class="input-control oneLine">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="listing[country]">
+                <div class="error"></div>
+                
+            </div>
+            <div class="input-control">
+                <label for="area"> Location </label>
+                <input type="text" id="area" name="listing[location]">
+                <div class="error"></div>
+            </div>
+            <button type="submit">ADD NEW LISTING</button>
+        </form>
+    </div>
+
+<script src="/js/newForm.js"></script>

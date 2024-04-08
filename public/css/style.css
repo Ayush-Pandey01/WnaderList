@@ -4,7 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     list-style-type: none;
-    text-decoration: none;
+    text-decoration: none!important;
 }
 :root{
     --bg-color:#ffffff;

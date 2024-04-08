@@ -36,7 +36,7 @@ li{
     justify-content: space-between;
     margin: 20px 0 0 20px;
 }
-.btn{
+/* .btn{
     text-decoration: none;
     display: inline-block;
     background-color: rgb(92, 226, 43);
@@ -46,7 +46,7 @@ li{
     border: none;
     border-radius: 5px;
     margin-right: 10px;
-}
+} */
 .delete{
     background-color: red;
     color: white;
@@ -58,7 +58,9 @@ li{
 } 
 
 
-
+.random{
+    height: 500px;
+}
 
 
 

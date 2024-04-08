@@ -19,32 +19,32 @@
                 <h1> Edit Your List</h1>
                 <div class="input-control">
                     <label for="title" id="form" >Enter title</label>
-                    <input type="text" id="title" name="title" value="<%= ShowData.title %>">
+                    <input type="text" id="title" name="listing[title]" value="<%= ShowData.title %>">
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
                     <label for="description">description</label>
-                    <textarea type="text" rows="4" id="description" name="description"><%= ShowData.description %></textarea>
+                    <textarea type="text" rows="4" id="description" name="listing[description]"><%= ShowData.description %></textarea>
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
                     <label for="image"> Image URL </label>
-                    <input type="text" id="image" name="image" value="<%= ShowData.image %>">
+                    <input type="text" id="image" name="listing[image]" value="<%= ShowData.image %>">
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
                     <label for="price">Price </label>
-                    <input type="number" id="price" name="price" value="<%= ShowData.price %>">
+                    <input type="number" id="price" name="listing[price]" value="<%= ShowData.price %>">
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
                     <label for="area"> Location </label>
-                    <input type="text" id="area" name="location" value="<%= ShowData.location %>">
+                    <input type="text" id="area" name="listing[location]" value="<%= ShowData.location %>">
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
                     <label for="country">Country</label>
-                    <input type="text" id="country" name="country" value="<%= ShowData.country %>">
+                    <input type="text" id="country" name="listing[country]" value="<%= ShowData.country %>">
                     <div class="error"></div>
                 </div>
                 <button type="submit">Submit</button>

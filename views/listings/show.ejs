@@ -1,12 +1,14 @@
 <link rel="stylesheet" href="/css/show.css">
 <% layout("/layouts/boilerplate") %>
 
+<!-- Show Page Section -->
     <div class="showpage">
-        <h1>
-            <%= ShowData.title %>
-        </h1>
+        <!-- Show Content -->
         <ul class="show-item">
             <div class="card">
+                <h1>
+                    <%= ShowData.title %>
+                </h1>
                 <img src="<%= ShowData.image %>" alt="Sorry">
                 <div class="bottum">
                     <div class="details">
@@ -25,14 +27,57 @@
                         </li>
                     </div>
                     <div class="btn">
-                        <form action="/listing/<%= ShowData._id %>/edit"><button class="btn">Edit</button></form><br>
+                        <form action="/listing/<%= ShowData._id %>/edit"><button class="btn btn-outline-success">Edit</button></form><br>
                         <form method="post" action="/listing/<%= ShowData._id %>/delete?_method=DELETE">
-                            <button class="btn delete" onclick="Ask()">Delete Listing</button>
+                            <button class="btn btn-outline-danger" onclick="Ask()">Delete Listing</button>
                     </div>
                 </div>
+
+        
+                </div>
+
             </div>
         </ul>
+        
 
         </form>
+
+
+        <hr>
+        <br>
+
+        <!-- Review Section -->
+        <div class="card row">
+            <h4>Leave Review</h4>
+            <form action="/listing/<%= ShowData.id %>/review" method="POST">
+
+                <div>
+                    <label for="rating">rating</label>
+                    <input type="range" min ="1" max="5" name="review[rating]" id="rating">
+                </div>
+                <div>
+                    <label for="comment">Comments</label>
+                    <textarea name="review[comment]" id="comment" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <button class="btn btn-outline-dark">Submit</button>
+                </div>
+            </form>
+            <div class="row">
+            <h2 >All Review</h2>
+      
+                <% for(review of ShowData.reviews) { %>
+                  <div class="card col-6 mb-3">
+                    <h5 class="card-title">UserName</h5>
+                    <p class="card-text"><%= review.comment %> </p>
+                    <p class="card-text"><%= review.rating %> </p>
+                    <form class="mb-3" method="POST" action="/listing/<%= ShowData._id %>/review/<%=review._id %>?_method=DELETE">
+                        <button class="btn btn-dark">DELETE</button>
+                    </form>
+                  </div>
+                    
+                    <% } %>
+                </div>
+           </div>
     </div>
     <script src="Ask.js"></script>
